@@ -1,4 +1,4 @@
-// File: C:\Users\91937\Desktop\Astro (1)\Astro\divine-miracle-frontend\src\app\page.js
+// File: C:\Users\dhava\Desktop\Astro\Astro\divine-miracle-frontend\src\app\page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
