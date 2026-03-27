@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isVercel = process.env.VERCEL === '1';
+
 const nextConfig = {
-  // Enable static export for cPanel hosting
-  output: 'export',
+  // Use full Next.js output on Vercel; keep static export for cPanel/local static hosting.
+  ...(isVercel
+    ? {}
+    : {
+        output: 'export',
+        trailingSlash: true,
+      }),
   
   // Disable image optimization for static export
   images: {
@@ -10,9 +17,6 @@ const nextConfig = {
   
   // Base path if your site is in a subdirectory (remove if root domain)
   // basePath: '/your-folder-name',
-  
-  // Trailing slash for better compatibility
-  trailingSlash: true,
   
   // Enable compression
   compress: true,
